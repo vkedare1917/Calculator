@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Calculator</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <div class="container">
+
+      <div class="calculator">
+
+         <input type="text" id="displayEquation" readonly>
+         <input type="text" id="displaySolution" value="0">
+
+         <div class="buttons">
+            <input type="button" class="btn function-btn" value="AC" onclick="clearInput()" title="Clear All">
+            <input type="button" class="btn function-btn" value="DEL" title="Delete single value"
+               onclick="clearSingleValue()">
+            <input type="button" class="btn history-btn function-btn" value="H" title="Show/Hide History"
+               onclick="showHideHistory()">
+            <input type="button" class="btn function-btn" value="C" title="Clear History" onclick="clearHistory()">
+            <input type="button" class="btn" value="1" onclick="displayInput('1')">
+            <input type="button" class="btn" value="2" onclick="displayInput('2')">
+            <input type="button" class="btn" value="3" onclick="displayInput('3')">
+            <input type="button" class="btn" value="+" onclick="displayInput('+')">
+            <input type="button" class="btn" value="4" onclick="displayInput('4')">
+            <input type="button" class="btn" value="5" onclick="displayInput('5')">
+            <input type="button" class="btn" value="6" onclick="displayInput('6')">
+            <input type="button" class="btn" value="-" onclick="displayInput('-')">
+            <input type="button" class="btn" value="7" onclick="displayInput('7')">
+            <input type="button" class="btn" value="8" onclick="displayInput('8')">
+            <input type="button" class="btn" value="9" onclick="displayInput('9')">
+            <input type="button" class="btn" value="*" onclick="displayInput('*')">
+            <input type="button" class="btn" value="." onclick="displayInput('.')">
+            <input type="button" class="btn" value="0" onclick="displayInput('0')">
+            <input type="button" class="btn" value="=" onclick="getSolution()">
+            <input type="button" class="btn" value="/" onclick="displayInput('/')">
+         </div>
+
+      </div>
+
+      <div class="history">
+         <h2>History</h2>
+         <div class="display-history"></div>
+      </div>
+   </div>
+   <script src="main.js"></script>
+</body>
+
+</html>
