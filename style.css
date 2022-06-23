@@ -75,30 +75,6 @@ body {
    background: black;
 }
 
-.history {
-   display: none;
-   background-color: white;
-   color: #1f1f1f;
-   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-   margin: 10px auto;
-   width: 320px;
-   height: 280px;
-   overflow: auto;
-}
-
-.show-history {
-   display: block;
-}
-
-.history h2, p {
-   margin: 10px;
-   padding: 5px; 
-}
-
-.history h2 {
-   font-family: Footlight MT;
-   border-bottom: 1px solid #1f1f1f;
-}
 
 .buttons .function-btn {
    background-color: #3199D5;
@@ -112,6 +88,45 @@ body {
    transition: 0.3s all ease-in;
 }
 
+/* History */
+.history {
+   display: none;
+   background-color: white;
+   color: #1f1f1f;
+   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+   margin: 10px auto;
+   width: 320px;
+   height: 280px;
+   overflow: auto;
+   scroll-behavior: smooth;
+}
+
+.show-history {
+   display: block;
+}
+
+.history-div {
+   margin: 0;
+   padding: 5px;
+   color: white; 
+   cursor: pointer;
+   background-color: #55BBF4;
+   transition: 0.3s ease-in;
+   border: none;
+}
+
+.history-div:hover {
+   background-color: rgb(11, 202, 138);
+}
+
+.history h2, p {
+   padding: 10px; 
+}
+
+.history h2 {
+   font-family: Footlight MT;
+   border-bottom: 1px solid #1f1f1f;
+}
 
 /* Media Queries */
 @media screen and (max-width: 1200px) {
@@ -147,11 +162,11 @@ body {
    }
 
    #displaySolution, #displayEquation {
-      width: 210px;
+      width: 215px;
    }
 
    .buttons {
-      grid-template-columns: repeat(4, 55px);
+      grid-template-columns: repeat(4, 58px);
    }
 
    .buttons .btn {

@@ -6,6 +6,12 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Calculator</title>
+   <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+   <!-- Styles -->
    <link rel="stylesheet" href="style.css">
 </head>
 
@@ -19,11 +25,20 @@
 
          <div class="buttons">
             <input type="button" class="btn function-btn" value="AC" onclick="clearInput()" title="Clear All">
-            <input type="button" class="btn function-btn" value="DEL" title="Delete single value"
-               onclick="clearSingleValue()">
-            <input type="button" class="btn history-btn function-btn" value="H" title="Show/Hide History"
+
+            <button type="button" class="btn history-btn function-btn" title="Show/Hide History"
                onclick="showHideHistory()">
-            <input type="button" class="btn function-btn" value="C" title="Clear History" onclick="clearHistory()">
+               <i class="fa-solid fa-clock-rotate-left"></i>
+            </button>
+
+            <button type="button" class="btn function-btn" title="Clear History" onclick="clearHistory()">
+               <i class="fa-solid fa-trash"></i>
+            </button>
+
+            <button type="button" class="btn function-btn" title="Delete single value" onclick="deleteSingleString()">
+               <i class="fa-solid fa-delete-left"></i>
+            </button>
+
             <input type="button" class="btn" value="1" onclick="displayInput('1')">
             <input type="button" class="btn" value="2" onclick="displayInput('2')">
             <input type="button" class="btn" value="3" onclick="displayInput('3')">
@@ -43,7 +58,6 @@
          </div>
 
       </div>
-
       <div class="history">
          <h2>History</h2>
          <div class="display-history"></div>
